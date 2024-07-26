@@ -16,9 +16,9 @@ export class AppComponent implements OnInit{
   ngOnInit() {
     this.items = [
       { label: 'Login', icon: 'pi pi-sign-in', disabled: false , url: "/"},
-      { label: 'Dashboard', icon: 'pi pi-home', disabled: false , url: "dashboard"},
-      { label: 'Transactions', icon: 'pi pi-chart-line', disabled: false, url: "transactions" },
-      { label: 'Expenses', icon: 'pi pi-credit-card', disabled: false, url: "expenses" },
+      { label: 'Dashboard', icon: 'pi pi-home', disabled: false , url: "/dashboard"},
+      { label: 'Transactions', icon: 'pi pi-chart-line', disabled: false, url: "/transactions" },
+      { label: 'Expenses', icon: 'pi pi-credit-card', disabled: false, url: "/expenses" },
     ];
 
     this.activeItem = this.items[0];
