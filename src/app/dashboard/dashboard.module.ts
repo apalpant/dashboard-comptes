@@ -11,6 +11,9 @@ import { CardModule } from "primeng/card";
   declarations: [
     DashboardComponent
   ],
+  exports: [
+    DashboardComponent
+  ],
   imports: [
     CommonModule,
     DashboardRoutingModule,
