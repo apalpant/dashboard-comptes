@@ -21,7 +21,7 @@ export class AppComponent implements OnInit{
       { label: 'Expenses', icon: 'pi pi-credit-card', disabled: false, url: "/expenses" },
     ];
 
-    this.activeItem = this.items[0];
+    this.activeItem = this.items[1];
   }
 
   onActiveItemChange(event: MenuItem) {
