@@ -15,13 +15,13 @@ export class AppComponent implements OnInit{
 
   ngOnInit() {
     this.items = [
-      { label: 'Login', icon: 'pi pi-sign-in', disabled: false , url: "/"},
-      { label: 'Dashboard', icon: 'pi pi-home', disabled: false , url: "/dashboard"},
-      { label: 'Transactions', icon: 'pi pi-chart-line', disabled: false, url: "/transactions" },
-      { label: 'Expenses', icon: 'pi pi-credit-card', disabled: false, url: "/expenses" },
+      { label: 'Login', icon: 'pi pi-sign-in', disabled: false , routerLink: "/"},
+      { label: 'Dashboard', icon: 'pi pi-home', disabled: false , routerLink: "dashboard"},
+      { label: 'Transactions', icon: 'pi pi-chart-line', disabled: false, routerLink: "transactions" },
+      { label: 'Expenses', icon: 'pi pi-credit-card', disabled: false, routerLink: "expenses" },
     ];
 
-    this.activeItem = this.items[1];
+    this.activeItem = this.items[0];
   }
 
   onActiveItemChange(event: MenuItem) {
