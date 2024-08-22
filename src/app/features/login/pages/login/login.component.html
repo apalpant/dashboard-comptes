@@ -1,3 +1,33 @@
-<p>login works!</p>
-<p-button (onClick)="onLoginButtonClick()"> </p-button>
-<router-outlet></router-outlet>
+<asl-google-signin-button type='icon' size='medium' text='continue_with'></asl-google-signin-button>
+
+
+
+
+
+<p>login works !</p>
+
+
+
+
+<!--<div-->
+<!--  id="g_id_onload"-->
+<!--  data-client_id="163654754342-t3htf7nfp828bdna06ijsr55s1cf4v8b.apps.googleusercontent.com"-->
+<!--  data-callback="handleCredentialsResponse"-->
+<!--&gt;</div>-->
+<!--&lt;!&ndash; Load Atlas App Services &ndash;&gt;-->
+<!--<script src="https://unpkg.com/realm-web/dist/bundle.iife.js"></script>-->
+<!--&lt;!&ndash; Load Google One Tap &ndash;&gt;-->
+<!--<script src="https://accounts.google.com/gsi/client"></script>-->
+<!--&lt;!&ndash; Log in with Realm and Google Authentication &ndash;&gt;-->
+<!--<script async defer>-->
+<!--  const app = new Realm.App({-->
+<!--    id: "application-1-bwsjwce",-->
+<!--  });-->
+<!--  // Callback used in `data-callback` to handle Google's response and log user into App Services-->
+<!--  function handleCredentialsResponse(response) {-->
+<!--    const credentials = Realm.Credentials.google({ authCode: response.credential });-->
+<!--    app-->
+<!--      .logIn(credentials)-->
+<!--      .then((user) => alert(`Logged in with id: ${user.id}`));-->
+<!--  }-->
+<!--</script>-->

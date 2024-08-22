@@ -6,8 +6,48 @@
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+  <!-- Load Atlas App Services -->
+<!--  <script src="https://unpkg.com/realm-web/dist/bundle.iife.js"></script>-->
+  <!-- Load Google One Tap -->
+  <script src="https://accounts.google.com/gsi/client"></script>
+
+<!--  <script>-->
+<!--    function decodeJWTToken(token){-->
+<!--      return JSON.parse(atob(token.split(".")[1]))-->
+<!--    }-->
+<!--    function handleOauthResponse(response){-->
+<!--      console.log(response)-->
+<!--      const responsePayload = decodeJWTToken(response.credential)-->
+<!--      console.log(responsePayload)-->
+<!--      sessionStorage.setItem('loggedinUser',JSON.stringify(responsePayload))-->
+
+<!--      // window.location('dashboard')-->
+<!--      //Changed the above URL where you want user to be redirected-->
+<!--    }-->
+<!--  </script>-->
+
 </head>
 <body>
-  <app-root></app-root>
+
+<!--<div id="g_id_onload"-->
+<!--     data-client_id="163654754342-t3htf7nfp828bdna06ijsr55s1cf4v8b.apps.googleusercontent.com"-->
+<!--     data-context="signin"-->
+<!--     data-ux_mode="popup"-->
+<!--     data-itp_support="true"-->
+<!--     data-callback="handleOauthResponse"-->
+<!--&gt;-->
+<!--</div>-->
+
+<!--<div class="g_id_signin"-->
+<!--     data-type="standard"-->
+<!--     data-shape="rectangular"-->
+<!--     data-theme="outline"-->
+<!--     data-text="signin_with"-->
+<!--     data-size="large"-->
+<!--     data-logo_alignment="left">-->
+<!--</div>-->
+
+<app-root></app-root>
 </body>
 </html>

@@ -1,4 +1,5 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
+import { AuthenticationService } from "../../../../core/services/authentication-service/authentication.service";
 
 @Component({
   selector: 'app-expenses',
@@ -9,7 +10,7 @@ export class ExpensesComponent  implements OnInit, OnDestroy {
 
   componentName = 'ExpensesComponent'
 
-  constructor() {
+  constructor(private authenticationService: AuthenticationService) {
     console.log(`constructor ${this.componentName}`)
   }
 
@@ -20,5 +21,4 @@ export class ExpensesComponent  implements OnInit, OnDestroy {
   ngOnInit(): void {
     console.log(`ngOnInit ${this.componentName}`)
   }
-
 }
