@@ -13,26 +13,32 @@ import { InputTextModule } from "primeng/inputtext";
 import { MessageModule } from "primeng/message";
 import { MessageService } from "primeng/api";
 import { ToastModule } from "primeng/toast";
+import { ProgressSpinnerModule } from "primeng/progressspinner";
+import { SharedModule } from "../../shared/shared.module";
+import { CoreModule } from "../../core/core.module";
+import { TransactionsTableComponent } from './components/transactions-table/transactions-table.component';
 
 
 
 @NgModule({
   declarations: [
     TransactionsComponent,
+    TransactionsTableComponent,
   ],
-  imports: [
-    CommonModule,
-    TransactionsRoutingModule,
-    TableModule,
-    TagModule,
-    CalendarModule,
-    FormsModule,
-    DropdownModule,
-    RippleModule,
-    ToolbarModule,
-    InputTextModule,
-    ToastModule
-  ],
+    imports: [
+        CommonModule,
+        TransactionsRoutingModule,
+        TableModule,
+        TagModule,
+        CalendarModule,
+        FormsModule,
+        DropdownModule,
+        RippleModule,
+        ToolbarModule,
+        InputTextModule,
+        ToastModule,
+        ProgressSpinnerModule
+    ],
   providers: [MessageService]
 })
 export class TransactionsModule { }

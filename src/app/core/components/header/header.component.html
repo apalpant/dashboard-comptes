@@ -1,0 +1,44 @@
+<p-toolbar>
+
+  <div class="grid">
+<!--    <div class="col-12  sm:col-9 md:col-6 lg:col-3">-->
+<!--      <div class="text-center p-3 border-round-sm bg-primary font-bold">col-12 sm:col-9 md:col-6 lg:col-3</div>-->
+<!--    </div>-->
+<!--    <div class="col-12  sm:col-9 md:col-6 lg:col-3">-->
+<!--      <div class="text-center p-3 border-round-sm bg-primary font-bold">col-12 sm:col-9 md:col-6 lg:col-3</div>-->
+<!--    </div>-->
+<!--    <div class="col-12  sm:col-9 md:col-6 lg:col-3">-->
+<!--      <div class="text-center p-3 border-round-sm bg-primary font-bold">col-12 sm:col-9 md:col-6 lg:col-3</div>-->
+<!--    </div>-->
+<!--    <div class="col-12  sm:col-9 md:col-6 lg:col-3">-->
+<!--      <div class="text-center p-3 border-round-sm bg-primary font-bold">col-12 sm:col-9 md:col-6 lg:col-3</div>-->
+<!--    </div>-->
+
+    <div class="col-12 sm:col-12 md:col-3 lg:col-3">
+      <p-menu #menu [model]="items" [popup]="true"></p-menu>
+      <button pButton type="button" (click)="menu.toggle($event)" icon="pi pi-bars" [label]="nom"></button>
+
+    </div>
+
+    <div class="col-12 sm:col-12 md:col-3 lg:col-3" >
+      <p-dropdown [options]="cities" [(ngModel)]="selectedCity" placeholder="Select a City"></p-dropdown>
+      <p-button icon="pi pi-search" (click)="reload()"></p-button>
+    </div>
+
+    <div class="col-12 sm:col-12 md:col-3 lg:col-3">
+    <p-calendar [(ngModel)]="from" dateFormat="dd/mm/yy"></p-calendar>
+    </div>
+
+    <div class="col-12 sm:col-12 md:col-3 lg:col-3">
+    <p-calendar [(ngModel)]="to" dateFormat="dd/mm/yy"></p-calendar>
+    </div>
+
+    <!--  <p-calendar-->
+    <!--    [(ngModel)]="date"-->
+    <!--    view="month"-->
+    <!--    dateFormat="MM yy"-->
+    <!--    [readonlyInput]="true" />-->
+
+
+  </div>
+</p-toolbar>
