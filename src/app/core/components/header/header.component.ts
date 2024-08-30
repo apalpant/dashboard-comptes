@@ -17,8 +17,9 @@ export class HeaderComponent implements OnInit{
 
   activeItem: MenuItem | undefined;
   nom: string = "Transactions";
+  icon: string = "pi pi-chart-line"
 
-  date: Date = new Date();
+    date: Date = new Date();
 
   from!: Date;
   to!: Date;
@@ -27,9 +28,9 @@ export class HeaderComponent implements OnInit{
 
   ngOnInit(): void {
     this.items = [
-      { label: 'Dashboard', icon: 'pi pi-home', disabled: false , routerLink: "dashboard", skipLocationChange: true, command: () => {this.nom = 'Dashboard' }},
-      { label: 'Transactions', icon: 'pi pi-chart-line', disabled: false, routerLink: "transactions", skipLocationChange: true, command: () => {this.nom = 'Transactions' } },
-      { label: 'Expenses', icon: 'pi pi-credit-card', disabled: false, routerLink: "expenses", skipLocationChange: true, command: () => {this.nom = 'Expenses' } },
+      { label: 'Dashboard', icon: 'pi pi-home', disabled: false , routerLink: "dashboard", skipLocationChange: true, command: () => {this.nom = 'Dashboard'; this.icon='pi pi-home' }},
+      { label: 'Transactions', icon: 'pi pi-chart-line', disabled: false, routerLink: "transactions", skipLocationChange: true, command: () => {this.nom = 'Transactions'; this.icon='pi pi-chart-line' } },
+      { label: 'Expenses', icon: 'pi pi-credit-card', disabled: false, routerLink: "expenses", skipLocationChange: true, command: () => {this.nom = 'Expenses'; this.icon='pi pi-credit-card' } },
     ];
 
     this.activeItem = this.items[0];

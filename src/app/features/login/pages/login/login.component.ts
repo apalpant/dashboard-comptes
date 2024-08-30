@@ -3,7 +3,6 @@ import { Router } from "@angular/router";
 import { AuthenticationService } from "../../../../core/services/authentication-service/authentication.service";
 import { SocialAuthService } from "@abacritt/angularx-social-login";
 import * as Realm from "realm-web";
-import { takeUntilDestroyed } from "@angular/core/rxjs-interop";
 import { distinctUntilChanged } from "rxjs";
 
 @Component({
@@ -35,7 +34,7 @@ export class LoginComponent implements OnInit, OnDestroy {
 
     const app = new Realm.App({id: "application-2-cxpzhbm"});
 
-    this.authService.authState.pipe(takeUntilDestroyed(), distinctUntilChanged()).subscribe((user) => {
+    this.authService.authState.pipe(distinctUntilChanged()).subscribe((user) => {
 
       console.log('GOOGLE', user)
 

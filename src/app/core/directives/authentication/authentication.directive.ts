@@ -1,6 +1,5 @@
 import { Directive, TemplateRef, ViewContainerRef } from '@angular/core';
 import { AuthenticationService } from "../../services/authentication-service/authentication.service";
-import { takeUntilDestroyed } from "@angular/core/rxjs-interop";
 import { distinctUntilChanged } from "rxjs";
 
 @Directive({
@@ -12,7 +11,7 @@ export class AuthenticationDirective {
     private templateRef: TemplateRef<any>,
     private viewContainer: ViewContainerRef, private authenticationService: AuthenticationService) {
 
-    this.authenticationService.isAuthenticated$().pipe(takeUntilDestroyed(), distinctUntilChanged()).subscribe(value => {
+    this.authenticationService.isAuthenticated$().pipe(distinctUntilChanged()).subscribe(value => {
       if (value) {
         this.viewContainer.createEmbeddedView(this.templateRef);
       } else {
