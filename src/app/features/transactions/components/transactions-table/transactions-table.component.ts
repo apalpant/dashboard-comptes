@@ -41,10 +41,10 @@ export class TransactionsTableComponent {
   }
 
   onRowSelect(event: any) {
-    this.messageService.add({ severity: 'info', summary: 'Product Selected', detail: event.data.label });
+    this.messageService.add({ severity: 'info', summary: event.data.label, detail: event.data.amount });
   }
 
   onRowUnselect(event: any) {
-    this.messageService.add({ severity: 'info', summary: 'Product Unselected', detail: event.data.label });
+    // this.messageService.add({ severity: 'info', summary: event.data.label, detail: event.data.label });
   }
 }

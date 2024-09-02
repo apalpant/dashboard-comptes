@@ -1,0 +1,23 @@
+.label {
+  //overflow: hidden;
+  //text-overflow: ellipsis;
+  //display: inline-block;
+  //width: inherit;
+  //white-space: nowrap;
+}
+
+.p-datatable .p-datatable-tbody > tr > td {
+  padding: .5rem
+}
+
+
+:host ::ng-deep {
+  td {
+    padding: .5em;
+  }
+
+  .tableStyleClass {
+    //font-size: .5rem;
+  }
+
+}

@@ -1,6 +1,6 @@
 <p-toolbar>
 
-  <div class="grid">
+  <div class="grid" style="margin: -.5rem -1rem">
     <!--    <div class="col-12  sm:col-9 md:col-6 lg:col-3">-->
     <!--      <div class="text-center p-3 border-round-sm bg-primary font-bold">col-12 sm:col-9 md:col-6 lg:col-3</div>-->
     <!--    </div>-->
@@ -14,11 +14,13 @@
     <!--      <div class="text-center p-3 border-round-sm bg-primary font-bold">col-12 sm:col-9 md:col-6 lg:col-3</div>-->
     <!--    </div>-->
 
-    <div class="w-1 sm:w-3 md:hidden">
+    <div class="w-3 sm:w-3 md:hidden">
       <p-menu #menu [model]="items" [popup]="true"></p-menu>
-      <button pButton type="button" (click)="menu.toggle($event)" icon="pi pi-bars"><i [class]="icon"
-                                                                                       style="padding-left: .5em"></i>
+      <button pButton type="button" (click)="menu.toggle($event)" icon="pi pi-bars" style="width: 100%">
+        <i [class]="icon" style="padding-left: .5em"></i>
       </button>
+<!--      <p-button icon="pi pi-search" (click)="reload()" [style]="{'padding': 0}"></p-button>-->
+<!--      <i class="pi pi-search" style="padding-left: .5em"  (click)="reload()" ></i>-->
     </div>
 
     <div class="hidden sm:hidden md:block md:w-3 lg:w-3">
@@ -32,7 +34,7 @@
 
     <div class="w-3 sm:block sm:w-3 md:hidden">
       <p-calendar [(ngModel)]="from" dateFormat="dd/mm"
-                  [touchUI]="true" [showIcon]="true"></p-calendar>
+                  [touchUI]="true" styleClass="small"></p-calendar>
     </div>
 
     <div class="hidden sm:hidden md:block md:w-3 lg:w-3 ">
@@ -41,12 +43,13 @@
 
     <div class="w-3 sm:block sm:w-3 md:hidden">
       <p-calendar [(ngModel)]="to" dateFormat="dd/mm"
-                  [touchUI]="true" [showIcon]="true"></p-calendar>
+                  [touchUI]="true" styleClass="small"></p-calendar>
     </div>
 
-    <div class="w-5 sm:w-3 md:w-3 lg:col-3" style="padding: 0">
-      <p-dropdown [options]="cities" [(ngModel)]="selectedCity" placeholder="Select a City"></p-dropdown>
-      <p-button icon="pi pi-search" (click)="reload()"></p-button>
+    <div class="w-3 sm:w-3 md:w-3 lg:col-3" style="padding: 0 0 0 .25rem;">
+      <p-dropdown [options]="cities" [(ngModel)]="selectedCity" placeholder="Select a City"
+                  styleClass="reduce"></p-dropdown>
+      <i class="pi pi-search" style="padding-left: .5em"  (click)="reload()" ></i>
     </div>
 
 

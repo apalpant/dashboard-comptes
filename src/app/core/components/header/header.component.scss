@@ -1,0 +1,15 @@
+:host ::ng-deep {
+  .small .p-inputtext {
+//display: none;
+  }
+  .small {
+    margin-left: .25rem;
+  }
+
+  .reduce .p-dropdown-trigger{
+    //display: none;
+    width: 25px;
+  }
+}
+
+
