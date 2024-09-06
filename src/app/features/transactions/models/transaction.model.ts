@@ -13,6 +13,7 @@ export class AggregatedTransaction {
 
 export class Sold {
   _id: string = "";
-  amount: number = 0;
+  real: number = 0;
+  expected: number = 0;
   date: Date = new Date();
 }

@@ -12,6 +12,6 @@ export class SoldService {
   }
 
   getSold(search: Search): Observable<number> {
-    return this.databaseService.getSold(search.account, search.from).pipe(map(sold => sold.amount));
+    return this.databaseService.getSold(search.account, search.from).pipe(map(sold => sold.real));
   }
 }
